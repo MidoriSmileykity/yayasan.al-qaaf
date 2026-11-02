@@ -5,7 +5,7 @@
    ========================================================== */
 
 /* ---- PENGATURAN: ganti kota sesuai lokasi yayasan ---- */
-const KOTA = 'Bekasi';        // GANTI: nama kota/kabupaten
+const KOTA = 'Tangerang Selatan';        // GANTI: nama kota/kabupaten
 const NEGARA = 'Indonesia';
 
 /* ---- 1) Jadwal sholat ---- */
