@@ -1,0 +1,84 @@
+/* ==========================================================
+   style.css — Gaya utama website Al-Qaaf
+   Mengikuti DESIGN.md (krem + kuning marigold, tombol pill, kartu 20px).
+   Variabel warna/ukuran ada di variables.css (jangan diubah di sini).
+   ========================================================== */
+
+/* Font: "Champ" tidak tersedia gratis, diganti Roboto Slab (mirip, slab tebal). */
+:root{ --font-champ:'Roboto Slab',Georgia,serif; }
+
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--surface-canvas);color:var(--color-ink-black);font:400 var(--text-body)/1.5 var(--font-dm-sans)}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--font-champ);font-weight:800}
+.wrap{max-width:var(--page-max-width);margin:0 auto;padding:0 var(--spacing-24)}
+section{padding:var(--section-gap) 0}
+.section-title{font-size:var(--text-heading);line-height:var(--leading-heading);margin-bottom:var(--spacing-32)}
+
+/* ---------- Navigasi atas ---------- */
+.nav{background:var(--surface-canvas);position:sticky;top:0;z-index:10;border-bottom:1px solid #0001}
+.nav .wrap{display:flex;align-items:center;gap:var(--spacing-24);height:72px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font:800 20px var(--font-champ)}
+.brand img{width:44px;height:44px}
+.nav-links{display:flex;gap:var(--spacing-24);margin-left:auto;align-items:center}
+.nav-links a{text-decoration:none}
+.nav-links a:hover,.nav-links a[aria-current]{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:2px}
+
+/* ---------- Tombol (selalu pill) ---------- */
+.btn{display:inline-block;padding:16px 28px;border-radius:var(--radius-buttons);font:500 16px var(--font-dm-sans);text-decoration:none;border:1.5px solid var(--color-ink-black);cursor:pointer}
+.btn-primary{background:var(--color-marigold)}
+.btn-outline{background:transparent}
+.btn-black{background:#000;color:#fff}
+.btn-sm{padding:10px 20px}
+.btn-light{color:#fff;border-color:#fff}
+
+/* ---------- Hero (foto utama + scrim hangat) ---------- */
+.hero{position:relative;color:#fff;padding:0;min-height:560px;display:flex;align-items:center;
+  background:linear-gradient(rgba(40,30,0,.55),rgba(40,30,0,.65)),url(../images/hero.jpg) center/cover}
+.hero .wrap{padding-top:80px;padding-bottom:80px;text-align:center}
+.hero h1{font-size:clamp(38px,7vw,var(--text-display));line-height:var(--leading-display);margin-bottom:var(--spacing-20)}
+.hero p{font-size:20px;max-width:640px;margin:0 auto var(--spacing-32)}
+.hero .actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+/* ---------- Kartu & grid ---------- */
+.grid{display:grid;gap:var(--element-gap);grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.card{background:var(--surface-card);border-radius:var(--radius-cards);padding:var(--card-padding)}
+.card h3{font-size:var(--text-heading-sm);line-height:var(--leading-heading-sm);margin-bottom:var(--spacing-12)}
+.card p+p,.card ul{margin-top:var(--spacing-12)}
+.card ul{padding-left:20px}
+.tag{display:inline-block;background:var(--color-marigold);border-radius:var(--radius-tags);padding:6px 16px;font:500 14px var(--font-dm-sans);margin-bottom:var(--spacing-12)}
+.mono{font-family:var(--font-dm-mono)}
+
+/* ---------- Jadwal sholat ---------- */
+.prayer{background:#fff}
+.prayer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:var(--spacing-16)}
+.prayer-item{background:var(--surface-canvas);border-radius:var(--radius-cards);padding:var(--spacing-20);text-align:center}
+.prayer-item b{display:block;font:500 15px var(--font-dm-sans)}
+.prayer-item span{font:800 28px var(--font-champ)}
+.prayer-item.next{background:var(--color-marigold)}
+.muted{color:var(--color-char);font-size:14px;margin-top:var(--spacing-16)}
+
+/* ---------- Donasi & unduhan ---------- */
+.rek{font:500 24px var(--font-dm-mono);margin:var(--spacing-8) 0}
+.copy-btn{margin-top:var(--spacing-12)}
+.map{border:1px solid #000;border-radius:var(--radius-cards);width:100%;height:360px}
+
+/* ---------- Galeri ---------- */
+.gallery-card{padding:0;overflow:hidden}
+.gallery-card img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.gallery-card .body{padding:var(--spacing-24)}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:var(--spacing-12)}
+.meta span{border:1px solid #000;border-radius:var(--radius-tags);padding:4px 14px;font-size:14px}
+
+/* ---------- Footer ---------- */
+footer{background:var(--surface-ink);color:#fff;padding:var(--spacing-48) 0}
+footer a{color:var(--color-marigold)}
+
+@media(max-width:640px){
+  .nav .wrap{height:auto;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+  .nav-links{margin-left:0;gap:16px}
+  section{padding:var(--spacing-48) 0}
+  .section-title{font-size:30px}
+}

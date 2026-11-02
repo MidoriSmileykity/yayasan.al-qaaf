@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<!-- ===== index.html — Halaman Utama =====
+ Bagian: Hero, Tentang Kami, Jadwal Sholat, Donasi, Legalitas, Lokasi, Kontak.
+ Teks bertanda "GANTI" wajib diisi data asli yayasan. -->
+<title>Pondok Pesantren Al-Qaaf — Yayasan Pendidikan Islam</title>
+<meta name="description" content="Website resmi Yayasan Pendidikan Islam Pondok Pesantren Al-Qaaf: tentang kami, jadwal sholat, lokasi, kontak, donasi, dan dokumen legalitas.">
+<link rel="canonical" href="https://alqaaf.ponpes.id/">
+<!-- Open Graph: tampilan saat link dibagikan di WhatsApp/Facebook -->
+<meta property="og:type" content="website"><meta property="og:locale" content="id_ID">
+<meta property="og:title" content="Pondok Pesantren Al-Qaaf">
+<meta property="og:description" content="Yayasan Pendidikan Islam Pondok Pesantren Al-Qaaf.">
+<meta property="og:image" content="https://alqaaf.ponpes.id/images/hero.jpg">
+<meta property="og:url" content="https://alqaaf.ponpes.id/">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#fff6d2">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="apple-touch-icon" href="images/favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono&family=DM+Sans:wght@400;500;700&family=Roboto+Slab:wght@500;800&display=swap">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/style.css">
+<!-- Data terstruktur untuk Google (organisasi pendidikan). Ganti alamat/telepon/URL. -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"EducationalOrganization","name":"Yayasan Pendidikan Islam Pondok Pesantren Al-Qaaf",
+"url":"https://alqaaf.ponpes.id/","logo":"https://alqaaf.ponpes.id/images/logo.png","image":"https://alqaaf.ponpes.id/images/hero.jpg",
+"telephone":"+6281234567890","address":{"@type":"PostalAddress","streetAddress":"GANTI alamat lengkap","addressLocality":"Bekasi","addressCountry":"ID"},
+"sameAs":["https://instagram.com/GANTI_USERNAME"]}
+</script>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="index.html"><img src="images/logo.png" alt="Logo Pondok Pesantren Al-Qaaf" width="44" height="44">Al-Qaaf</a>
+  <nav class="nav-links" aria-label="Menu utama">
+    <a href="index.html" aria-current="page">Beranda</a><a href="index.html#tentang">Tentang</a><a href="index.html#donasi">Donasi</a><a href="galeri.html" >Galeri</a><a class="btn btn-primary btn-sm" href="index.html#kontak">Kontak</a>
+  </nav></div></header>
+<main>
+
+<!-- HERO: foto utama + judul + 2 tombol (kuning + outline) -->
+<section class="hero"><div class="wrap">
+  <h1>Pondok Pesantren Al-Qaaf</h1>
+  <p>Mendidik generasi berilmu, berakhlak, dan bermanfaat bagi umat.</p>
+  <div class="actions"><a class="btn btn-primary" href="#donasi">Berdonasi</a><a class="btn btn-outline btn-light" href="#kontak">Hubungi Kami</a></div>
+</div></section>
+
+<!-- TENTANG KAMI: ganti isi dengan profil asli -->
+<section id="tentang"><div class="wrap">
+  <h2 class="section-title">Tentang Kami</h2>
+  <div class="grid">
+    <div class="card"><h3>Profil Yayasan</h3><p>Yayasan Pendidikan Islam Pondok Pesantren Al-Qaaf adalah lembaga pendidikan yang membina santri dalam ilmu agama dan akhlak mulia. GANTI dengan sejarah singkat yayasan.</p></div>
+    <div class="card"><h3>Visi</h3><p>GANTI: tuliskan visi yayasan.</p></div>
+    <div class="card"><h3>Misi</h3><ul><li>GANTI misi pertama</li><li>GANTI misi kedua</li><li>GANTI misi ketiga</li></ul></div>
+  </div>
+</div></section>
+
+<!-- JADWAL SHOLAT: diisi otomatis oleh js/main.js (kota diatur di sana) -->
+<section class="prayer" id="jadwal"><div class="wrap">
+  <h2 class="section-title">Jadwal Sholat Hari Ini</h2>
+  <div class="prayer-grid" id="prayer-grid" aria-live="polite"><p>Memuat jadwal…</p></div>
+  <p class="muted">Sumber: Aladhan API, metode Kemenag RI. Waktu yang disorot kuning adalah sholat berikutnya.</p>
+</div></section>
+
+<!-- DONASI: ganti bank, nomor, dan nama pemilik rekening (nomor juga di data-copy) -->
+<section id="donasi"><div class="wrap">
+  <h2 class="section-title">Donasi</h2>
+  <div class="grid">
+    <div class="card"><span class="tag">Bank GANTI</span><p class="rek">0000000000</p><p>a.n. Yayasan Pendidikan Islam Ponpes Al-Qaaf</p>
+      <button class="btn btn-black btn-sm copy-btn" data-copy="0000000000">Salin nomor</button></div>
+    <div class="card"><span class="tag">Konfirmasi</span><p>Setelah berdonasi, mohon konfirmasi melalui WhatsApp agar donasi dapat dicatat dan dilaporkan.</p>
+      <p><a class="btn btn-primary btn-sm" href="https://wa.me/6281234567890?text=Assalamu%27alaikum%2C%20saya%20ingin%20konfirmasi%20donasi">Konfirmasi Donasi</a></p></div>
+  </div>
+</div></section>
+
+<!-- LEGALITAS: taruh file PDF di folder /docs lalu sesuaikan nama file -->
+<section id="legalitas"><div class="wrap">
+  <h2 class="section-title">Legalitas Yayasan</h2>
+  <div class="grid">
+    <div class="card"><h3>Akta Pendirian</h3><p>Dokumen akta pendirian yayasan.</p><p><a class="btn btn-outline btn-sm" href="docs/akta-pendirian.pdf" download>Unduh PDF</a></p></div>
+    <div class="card"><h3>SK Kemenkumham</h3><p>Surat keputusan pengesahan badan hukum.</p><p><a class="btn btn-outline btn-sm" href="docs/sk-kemenkumham.pdf" download>Unduh PDF</a></p></div>
+    <div class="card"><h3>Izin Operasional</h3><p>Izin operasional pondok pesantren.</p><p><a class="btn btn-outline btn-sm" href="docs/izin-operasional.pdf" download>Unduh PDF</a></p></div>
+  </div>
+</div></section>
+
+<!-- LOKASI: ganti alamat dan src iframe (Google Maps > Bagikan > Sematkan peta > salin src) -->
+<section id="lokasi"><div class="wrap">
+  <h2 class="section-title">Lokasi</h2>
+  <p style="margin-bottom:24px">GANTI: alamat lengkap pondok pesantren, kelurahan, kecamatan, kota.</p>
+  <iframe class="map" title="Peta lokasi Pondok Pesantren Al-Qaaf" loading="lazy" src="https://www.google.com/maps?q=Bekasi&output=embed"></iframe>
+</div></section>
+
+<!-- KONTAK: ganti nomor WhatsApp (format 62...), username Instagram, dan URL website -->
+<section id="kontak"><div class="wrap">
+  <h2 class="section-title">Kontak</h2>
+  <div class="grid">
+    <div class="card"><h3>WhatsApp</h3><p>+62 812-3456-7890</p><p><a class="btn btn-primary btn-sm" href="https://wa.me/6281234567890">Chat WhatsApp</a></p></div>
+    <div class="card"><h3>Instagram</h3><p>@GANTI_USERNAME</p><p><a class="btn btn-outline btn-sm" href="https://instagram.com/GANTI_USERNAME" rel="noopener">Buka Instagram</a></p></div>
+    <div class="card"><h3>Website</h3><p>alqaaf.ponpes.id</p><p><a class="btn btn-outline btn-sm" href="https://alqaaf.ponpes.id">Kunjungi</a></p></div>
+  </div>
+</div></section>
+</main>
+<footer><div class="wrap"><p>&copy; 2026 Yayasan Pendidikan Islam Pondok Pesantren Al-Qaaf. Seluruh hak cipta dilindungi.</p>
+<p><a href="index.html">Beranda</a> · <a href="galeri.html">Galeri</a> · <a href="https://wa.me/6281234567890">WhatsApp</a></p></div></footer>
+<script src="js/main.js" defer></script>
+</body></html>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- sitemap.xml — daftar halaman untuk Google. Tambah <url> baru jika ada halaman baru. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://alqaaf.ponpes.id/</loc><priority>1.0</priority></url>
+  <url><loc>https://alqaaf.ponpes.id/galeri.html</loc><priority>0.8</priority></url>
+</urlset>

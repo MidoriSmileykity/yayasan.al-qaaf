@@ -1,0 +1,4 @@
+# robots.txt — izinkan semua mesin pencari + tunjukkan sitemap
+User-agent: *
+Allow: /
+Sitemap: https://alqaaf.ponpes.id/sitemap.xml
