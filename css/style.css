@@ -82,3 +82,36 @@ footer a{color:var(--color-marigold)}
   section{padding:var(--spacing-48) 0}
   .section-title{font-size:30px}
 }
+
+/* ==========================================================
+   Perbaikan responsif mobile (tambahan di akhir file)
+   Tujuan: halaman tidak bisa digeser ke kiri/kanan di HP.
+   ========================================================== */
+
+/* Pengaman: potong apa pun yang meluap ke samping (clip tidak merusak menu sticky) */
+body{overflow-x:clip}
+
+/* Menu atas boleh turun baris jika layar sempit */
+.nav-links{flex-wrap:wrap}
+
+/* Grid kartu: lebar minimum tidak pernah melebihi lebar layar */
+.grid{grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr))}
+
+/* Isi kartu boleh menyusut, teks/nomor panjang dipatahkan otomatis */
+.card,.grid>*{min-width:0}
+.card,.prayer-item{overflow-wrap:anywhere}
+
+/* Nomor rekening mengecil mengikuti lebar layar */
+.rek{font-size:clamp(18px,5.5vw,24px)}
+
+/* Peta tidak melebihi lebar layar */
+.map{max-width:100%}
+
+@media(max-width:640px){
+  .wrap{padding:0 var(--spacing-16)}   /* margin samping lebih tipis */
+  .nav .wrap{gap:12px}
+  .hero{min-height:480px}
+  .hero p{font-size:18px}
+  .btn{padding:14px 22px}
+  .map{height:280px}
+}
