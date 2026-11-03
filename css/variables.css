@@ -1,7 +1,7 @@
 :root {
   /* Colors */
-  --color-buttercream: #fff6d2;
-  --color-marigold: #ffd801;
+  --color-buttercream: #f2f7e6;
+  --color-marigold: #5cc46a;
   --color-ink-black: #000000;
   --color-bone-white: #ffffff;
   --color-char: #666664;
@@ -79,7 +79,7 @@
   --shadow-md: rgba(70, 58, 0, 0.1) 0px 4px 12px 0px;
 
   /* Surfaces */
-  --surface-canvas: #fff6d2;
+  --surface-canvas: #f2f7e6;
   --surface-card: #ffffff;
   --surface-oat: #cccbc7;
   --surface-ink: #000000;
