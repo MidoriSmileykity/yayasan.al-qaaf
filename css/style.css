@@ -115,3 +115,7 @@ body{overflow-x:clip}
   .btn{padding:14px 22px}
   .map{height:280px}
 }
+
+/* Ikon Font Awesome di kartu kontak */
+.card h3 i{margin-right:10px;font-size:.9em}
+.btn i{margin-right:6px}
