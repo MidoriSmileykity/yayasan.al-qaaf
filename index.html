@@ -99,12 +99,36 @@
  <!-- LEGALITAS: taruh file PDF di folder /docs lalu sesuaikan nama file -->
 <section id="legalitas"><div class="wrap">
   <h2 class="section-title">Legalitas Yayasan</h2>
-  <div class="grid">
-    <div class="card"><h3>Piagam Statistik Pesantren</h3><p>Piagam Statistik Pesantren.</p><p><a class="btn btn-outline btn-sm" href="docs/piagam_statistik_pesantren.jpg" download>Unduh Dokumen</a></p></div>
-    <div class="card"><h3>Surat Keterangan Kesbangpol</h3><p>Surat Keterangan Kesbangpol.</p><p><a class="btn btn-outline btn-sm" href="docs/surat-keterangan-kesbangpol.jpg" download>Unduh PDF</a></p></div>
+<div class="grid">
+    <div class="card">
+        <h3>Piagam Statistik Pesantren</h3>
+        <p>Piagam Statistik Pesantren.</p>
+        <p><button class="btn btn-outline btn-sm" onclick="bukaGambar('docs/piagam_statistik_pesantren.jpg')">Lihat Dokumen</button></p>
+    </div>
+    <div class="card">
+        <h3>Surat Keterangan Kesbangpol</h3>
+        <p>Surat Keterangan Kesbangpol.</p>
+        <p><button class="btn btn-outline btn-sm" onclick="bukaGambar('docs/surat-keterangan-kesbangpol.jpg')">Lihat Dokumen</button></p>
+    </div>
     <div class="card"><h3>SK Kemenkumham</h3><p>SK Kemenkumham Nomor</p><p>C-471.HT.01.02.TH 2004. Tanggal 16 Agustus 2004.</p>
   </div>
 </div></section>
+
+<!-- Wadah Popup Gambar -->
+  
+<div id="modalGambar" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.8); z-index:9999; justify-content:center; align-items:center; padding:20px;" onclick="tutupGambar()">
+    <img id="previewImg" src="" alt="Preview Dokumen" style="max-width:90%; max-height:90vh; border-radius:8px; box-shadow:0 4px 20px rgba(0,0,0,0.5);" onclick="event.stopPropagation()">
+</div>
+
+<script>
+function bukaGambar(src) {
+    document.getElementById('previewImg').src = src;
+    document.getElementById('modalGambar').style.display = 'flex';
+}
+function tutupGambar() {
+    document.getElementById('modalGambar').style.display = 'none';
+}
+</script>
 
 <!-- DONASI: ganti bank, nomor, dan nama pemilik rekening (nomor juga di data-copy) -->
 <section id="donasi"><div class="wrap">
