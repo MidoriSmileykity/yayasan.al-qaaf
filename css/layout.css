@@ -77,3 +77,19 @@
   .bottom-nav a[aria-current]{color:#000;font-weight:700}
   .bottom-nav a[aria-current] i{background:var(--color-marigold)}
 }
+
+/* ==========================================================
+   PERBAIKAN KOMPATIBILITAS (header/footer kini dibuat lewat JS)
+   ========================================================== */
+
+/* Header "menempel" harus di pembungkusnya: sticky di dalam #site-header tidak akan bekerja
+   karena pembungkusnya setinggi header itu sendiri. */
+#site-header{position:sticky;top:0;z-index:30}
+#site-header .nav{position:static}
+
+/* Saat klik menu cepat (#donasi, #jadwal, ...), judul tidak tertutup header */
+html{scroll-padding-top:84px}
+@media(max-width:768px){html{scroll-padding-top:68px}}
+
+/* Pesan "Memuat jadwal…" / gagal muat tidak terjepit di 1 kolom */
+.prayer-grid>p{grid-column:1/-1}
