@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  
+<meta charset="utf-8">
 <!-- ===== index.html — Halaman Utama =====
- Bagian: Hero, Tentang Kami, Jadwal Sholat, Donasi, Legalitas, Lokasi, Kontak.
- Teks bertanda "GANTI" wajib diisi data asli yayasan -->
- 
+ Bagian: Hero, Menu Cepat, Tentang Kami, Jadwal Sholat, Legalitas, Donasi, Lokasi, Kontak.
+ Header & footer dibuat otomatis oleh js/layout.js (jangan tulis manual di sini). -->
 <title>Pondok Pesantren Al-Qaaf — Yayasan Pendidikan Islam</title>
 <meta name="description" content="Website resmi Yayasan Al-Qaaf: tentang kami, jadwal sholat, lokasi, kontak, donasi, dan dokumen legalitas.">
 <link rel="canonical" href="https://alqaaf.ponpes.id/">
-
-  
 <!-- Open Graph: tampilan saat link dibagikan di WhatsApp/Facebook -->
 <meta property="og:type" content="website"><meta property="og:locale" content="id_ID">
 <meta property="og:title" content="Yayasan Al-Qaaf">
 <meta property="og:description" content="Yayasan Al-Qaaf.">
 <meta property="og:image" content="https://alqaaf.ponpes.id/images/hero.png">
 <meta property="og:url" content="https://alqaaf.ponpes.id/">
-<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#fff6d2">
 <link rel="icon" href="favicon.ico" sizes="any">
@@ -27,11 +23,11 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono&family=DM+Sans:wght@400;500;700&family=Roboto+Slab:wght@500;800&display=swap">
 <link rel="stylesheet" href="css/variables.css">
 <link rel="stylesheet" href="css/style.css">
-  
-<!-- Font Awesome: ikon WhatsApp, Instagram, Website -->
+<link rel="stylesheet" href="css/layout.css">
+<!-- Font Awesome: ikon -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-<!-- favicon dari favicon generator for real --> 
+<!-- favicon dari favicon generator -->
 <link rel="icon" type="image/png" href="images/favicon-baru/favicon-96x96.png" sizes="96x96">
 <link rel="icon" type="image/svg+xml" href="images/favicon-baru/favicon.svg">
 <link rel="shortcut icon" href="images/favicon-baru/favicon.ico">
@@ -39,8 +35,7 @@
 <meta name="apple-mobile-web-app-title" content="Al-Qaaf">
 <link rel="manifest" href="images/favicon-baru/site.webmanifest">
 
- 
-<!-- Data terstruktur untuk Google (organisasi pendidikan). Ganti alamat/telepon/URL. -->
+<!-- Data terstruktur untuk Google (organisasi pendidikan) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -62,25 +57,30 @@
   "sameAs": ["https://www.instagram.com/yayasanalqaaf"]
 }
 </script>
- 
 </head>
 <body>
-<header class="nav"><div class="wrap">
-  <a class="brand" href="index.html"><img src="images/logo.png" alt="Logo Pondok Pesantren Al-Qaaf" width="44" height="44">Yayasan Al-Qaaf</a>
-  <nav class="nav-links" aria-label="Menu utama">
-    <a href="index.html" aria-current="page">Beranda</a><a href="index.html#tentang">Tentang</a><!--<a href="index.html#donasi">Donasi</a>--><a href="galeri.html" >Galeri</a>
-    <!---<a class="btn btn-primary btn-sm" href="index.html#kontak">Kontak</a>-->
-  </nav></div></header>
+<!-- Header dibuat oleh js/layout.js (ubah menu di sana). Tautan cadangan jika JavaScript mati: -->
+<div id="site-header"><noscript><nav class="wrap"><a href="index.html">Beranda</a> · <a href="pendidikan.html">Pendidikan</a> · <a href="masjid.html">Masjid</a> · <a href="galeri.html">Galeri</a></nav></noscript></div>
 <main>
 
-<!-- HERO: foto utama + judul + 2 tombol (kuning + outline) -->
+<!-- HERO: foto utama + judul + 2 tombol -->
 <section class="hero"><div class="wrap">
   <h1>Yayasan Al-Qaaf</h1>
   <p>Mendidik generasi berilmu, berakhlak, dan bermanfaat bagi umat.</p>
   <div class="actions"><a class="btn btn-primary" href="#donasi">Berdonasi</a><a class="btn btn-outline btn-light" href="#kontak">Hubungi Kami</a></div>
 </div></section>
 
-<!-- TENTANG KAMI: ganti isi dengan profil asli -->
+<!-- MENU CEPAT: ikon bulat menuju bagian di halaman ini (ubah/tambah sesuai kebutuhan) -->
+<section class="quick-wrap"><div class="wrap"><div class="quick">
+  <a href="#donasi"><span class="qi"><i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i></span>Donasi</a>
+  <a href="#jadwal"><span class="qi"><i class="fa-solid fa-clock" aria-hidden="true"></i></span>Jadwal Sholat</a>
+  <a href="#tentang"><span class="qi"><i class="fa-solid fa-circle-info" aria-hidden="true"></i></span>Tentang</a>
+  <a href="#legalitas"><span class="qi"><i class="fa-solid fa-file-lines" aria-hidden="true"></i></span>Legalitas</a>
+  <a href="#lokasi"><span class="qi"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span>Lokasi</a>
+  <a href="#kontak"><span class="qi"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>Kontak</a>
+</div></div></section>
+
+<!-- TENTANG KAMI -->
 <section id="tentang"><div class="wrap">
   <h2 class="section-title">Tentang Kami</h2>
   <div class="grid">
@@ -97,39 +97,23 @@
   <p class="muted">Sumber: Aladhan API, metode Kemenag RI.</p>
 </div></section>
 
- <!-- LEGALITAS: taruh file PDF di folder /docs lalu sesuaikan nama file -->
+<!-- LEGALITAS: dokumen berupa gambar di folder /docs, dibuka lewat popup -->
 <section id="legalitas"><div class="wrap">
   <h2 class="section-title">Legalitas Yayasan</h2>
-<div class="grid">
+  <div class="grid">
     <div class="card">
-        <h3>Piagam Statistik Pesantren</h3>
-        <p>Piagam Statistik Pesantren.</p>
-        <p><button class="btn btn-outline btn-sm" onclick="bukaGambar('docs/piagam_statistik_pesantren.jpg')">Lihat Dokumen</button></p>
+      <h3>Piagam Statistik Pesantren</h3>
+      <p>Piagam Statistik Pesantren.</p>
+      <p><button class="btn btn-outline btn-sm" onclick="bukaGambar('docs/piagam_statistik_pesantren.jpg')">Lihat Dokumen</button></p>
     </div>
     <div class="card">
-        <h3>Surat Keterangan Kesbangpol</h3>
-        <p>Surat Keterangan Kesbangpol.</p>
-        <p><button class="btn btn-outline btn-sm" onclick="bukaGambar('docs/surat-keterangan-kesbangpol.jpg')">Lihat Dokumen</button></p>
+      <h3>Surat Keterangan Kesbangpol</h3>
+      <p>Surat Keterangan Kesbangpol.</p>
+      <p><button class="btn btn-outline btn-sm" onclick="bukaGambar('docs/surat-keterangan-kesbangpol.jpg')">Lihat Dokumen</button></p>
     </div>
-    <div class="card"><h3>SK Kemenkumham</h3><p>SK Kemenkumham Nomor</p><p>C-471.HT.01.02.TH 2004. Tanggal 16 Agustus 2004.</p>
+    <div class="card"><h3>SK Kemenkumham</h3><p>SK Kemenkumham Nomor</p><p>C-471.HT.01.02.TH 2004. Tanggal 16 Agustus 2004.</p></div>
   </div>
 </div></section>
-
-<!-- Wadah Popup Gambar -->
-  
-<div id="modalGambar" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.8); z-index:9999; justify-content:center; align-items:center; padding:20px;" onclick="tutupGambar()">
-    <img id="previewImg" src="" alt="Preview Dokumen" style="max-width:90%; max-height:90vh; border-radius:8px; box-shadow:0 4px 20px rgba(0,0,0,0.5);" onclick="event.stopPropagation()">
-</div>
-
-<script>
-function bukaGambar(src) {
-    document.getElementById('previewImg').src = src;
-    document.getElementById('modalGambar').style.display = 'flex';
-}
-function tutupGambar() {
-    document.getElementById('modalGambar').style.display = 'none';
-}
-</script>
 
 <!-- DONASI: ganti bank, nomor, dan nama pemilik rekening (nomor juga di data-copy) -->
 <section id="donasi"><div class="wrap">
@@ -139,8 +123,8 @@ function tutupGambar() {
       <button class="btn btn-black btn-sm copy-btn" data-copy="123456789">Salin nomor</button></div>
 
     <div class="card"><span class="tag">QRIS</span><p>Yayasan Al-Qaaf</p>
-        <p><button class="btn btn-primary btn-sm" onclick="bukaGambar('docs/QRIS_Al-Qaaf.jpg')">Lihat QRIS</button></p></div>
-   
+      <p><button class="btn btn-primary btn-sm" onclick="bukaGambar('docs/QRIS_Al-Qaaf.jpg')">Lihat QRIS</button></p></div>
+
     <div class="card"><span class="tag">Konfirmasi</span><p>Setelah berdonasi, mohon konfirmasi melalui WhatsApp agar donasi dapat dicatat dan dilaporkan.</p>
       <p><a class="btn btn-primary btn-sm" href="https://wa.me/62818983669?text=Assalamu%27alaikum%2C%20saya%20ingin%20konfirmasi%20donasi">Konfirmasi Donasi</a></p></div>
   </div>
@@ -155,13 +139,13 @@ function tutupGambar() {
   <p style="margin-top:16px"><a class="btn btn-primary btn-sm" href="https://maps.app.goo.gl/9T4Gye35Y1khWnvZ8" rel="noopener">Buka di Google Maps</a></p>
 </div></section>
 
-<!-- KONTAK: ganti nomor WhatsApp (format 62...), username Instagram, dan URL website -->
+<!-- KONTAK -->
 <section id="kontak"><div class="wrap">
   <h2 class="section-title">Kontak</h2>
   <div class="grid">
     <div class="card"><h3><i class="fa-brands fa-whatsapp" aria-hidden="true"></i>WhatsApp</h3>
     <p>0818-983-669</p>
-    <p><a class="btn btn-primary btn-sm" href="https://wa.me/+62818983669?text=Assalamualaikum"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Chat WhatsApp</a></p></div>
+    <p><a class="btn btn-primary btn-sm" href="https://wa.me/62818983669?text=Assalamualaikum"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Chat WhatsApp</a></p></div>
 
     <div class="card"><h3><i class="fa-brands fa-instagram" aria-hidden="true"></i>Instagram</h3>
     <p>@yayasanalqaaf</p>
@@ -169,13 +153,22 @@ function tutupGambar() {
 
     <div class="card"><h3><i class="fa-solid fa-globe" aria-hidden="true"></i>Website</h3>
     <p>WEBSITE KAMI</p>
-    <p><a class="btn btn-outline btn-sm" href="tiny.url/mdr-ptbmi"><i class="fa-solid fa-globe" aria-hidden="true"></i> Kunjungi</a></p></div>
-    </div>
+    <p><a class="btn btn-outline btn-sm" href="https://midorismileykity.github.io/yayasan.al-qaaf/"><i class="fa-solid fa-globe" aria-hidden="true"></i> Kunjungi</a></p></div>
+  </div>
 </div></section>
- 
 </main>
- 
-<footer><div class="wrap"><p>&copy; 2026 Yayasan Al-Qaaf. Seluruh hak cipta dilindungi.</p>
-<p><a href="index.html">Beranda</a> · <a href="galeri.html">Galeri</a> · <a href="https://wa.me/62818983669">WhatsApp</a></p></div></footer>
+
+<!-- POPUP GAMBAR (dokumen legalitas & QRIS) -->
+<div id="modalGambar" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.8);z-index:9999;justify-content:center;align-items:center;padding:20px" onclick="tutupGambar()">
+  <img id="previewImg" src="" alt="Pratinjau dokumen" style="max-width:90%;max-height:90vh;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,.5)" onclick="event.stopPropagation()">
+</div>
+<script>
+function bukaGambar(src){document.getElementById('previewImg').src=src;document.getElementById('modalGambar').style.display='flex'}
+function tutupGambar(){document.getElementById('modalGambar').style.display='none'}
+</script>
+
+<!-- Footer + menu bawah HP dibuat oleh js/layout.js -->
+<div id="site-footer"></div>
+<script src="js/layout.js" defer></script>
 <script src="js/main.js" defer></script>
 </body></html>
