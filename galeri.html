@@ -1,38 +1,50 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+<meta charset="utf-8">
 <!-- ===== galeri.html — Galeri Kegiatan =====
  Tambah kegiatan: salin satu blok <article>, ubah foto, judul, deskripsi, lokasi, tanggal.
- Letakkan kegiatan terbaru di paling atas. -->
+ Letakkan kegiatan terbaru di paling atas.
+ Header & footer dibuat otomatis oleh js/layout.js (jangan tulis manual di sini). -->
 <title>Galeri Kegiatan — Pondok Pesantren Al-Qaaf</title>
 <meta name="description" content="Dokumentasi kegiatan santri dan keluarga besar Pondok Pesantren Al-Qaaf.">
 <link rel="canonical" href="https://alqaaf.ponpes.id/galeri.html">
-<meta property="og:title" content="Galeri Kegiatan — Pondok Pesantren Al-Qaaf"><meta property="og:image" content="https://alqaaf.ponpes.id/images/hero.jpg">
-<meta charset="utf-8">
+<meta property="og:type" content="website"><meta property="og:locale" content="id_ID">
+<meta property="og:title" content="Galeri Kegiatan — Pondok Pesantren Al-Qaaf">
+<meta property="og:description" content="Dokumentasi kegiatan santri dan keluarga besar Pondok Pesantren Al-Qaaf.">
+<meta property="og:image" content="https://alqaaf.ponpes.id/images/hero.png">
+<meta property="og:url" content="https://alqaaf.ponpes.id/galeri.html">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#fff6d2">
- 
-<!-- favicon dari favicon generator for real --> 
+<meta name="theme-color" content="#f2f7e6">
+
+<!-- favicon dari favicon generator -->
 <link rel="icon" type="image/png" href="images/favicon-baru/favicon-96x96.png" sizes="96x96">
 <link rel="icon" type="image/svg+xml" href="images/favicon-baru/favicon.svg">
 <link rel="shortcut icon" href="images/favicon-baru/favicon.ico">
 <link rel="apple-touch-icon" sizes="180x180" href="images/favicon-baru/apple-touch-icon.png">
 <meta name="apple-mobile-web-app-title" content="Al-Qaaf">
 <link rel="manifest" href="images/favicon-baru/site.webmanifest">
- 
+
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono&family=DM+Sans:wght@400;500;700&family=Roboto+Slab:wght@500;800&display=swap">
 <link rel="stylesheet" href="css/variables.css">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/layout.css">
+<!-- Font Awesome: ikon (dipakai menu bawah di HP) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 <body>
-<header class="nav"><div class="wrap">
-  <a class="brand" href="index.html"><img src="images/logo.png" alt="Logo Pondok Pesantren Al-Qaaf" width="44" height="44">Al-Qaaf</a>
-  <nav class="nav-links" aria-label="Menu utama">
-    <a href="index.html" >Beranda</a><a href="index.html#tentang">Tentang</a><!--<a href="index.html#donasi">Donasi</a>--><a href="galeri.html" aria-current="page">Galeri</a><!--<a class="btn btn-primary btn-sm" href="index.html#kontak">Kontak</a>-->
-  </nav></div></header>
-<main><section><div class="wrap">
-  <h1 class="section-title">Galeri Kegiatan</h1>
+<!-- Header dibuat oleh js/layout.js (ubah menu di sana). Tautan cadangan jika JavaScript mati: -->
+<div id="site-header"><noscript><nav class="wrap"><a href="index.html">Beranda</a> · <a href="pendidikan.html">Pendidikan</a> · <a href="masjid.html">Masjid</a> · <a href="galeri.html">Galeri</a></nav></noscript></div>
+<main>
+<!-- JUDUL HALAMAN -->
+<section class="page-head"><div class="wrap">
+  <h1>Galeri Kegiatan</h1>
+  <p>Dokumentasi kegiatan keluarga besar Yayasan Al-Qaaf.</p>
+</div></section>
+
+<!-- DAFTAR KEGIATAN: salin satu <article> untuk menambah kegiatan -->
+<section><div class="wrap">
   <div class="grid">
     <article class="card gallery-card">
       <img src="images/galeri/isra-mikraj-15-11-2026.png" alt="Kegiatan Isra Mikraj" loading="lazy" width="680" height="382">
@@ -45,7 +57,9 @@
         <div class="meta"><span>📍 Jl. Aren II</span><span>📅 27 Juni 2025</span></div></div>
     </article>
   </div>
-</div></section></main>
-<footer><div class="wrap"><p>&copy; 2026 Yayasan Al-Qaaf. Seluruh hak cipta dilindungi.</p>
-<p><a href="index.html">Beranda</a> · <a href="galeri.html">Galeri</a> · <a href="https://wa.me/62818983669">WhatsApp</a></p></div></footer>
+</div></section>
+</main>
+<!-- Footer + menu bawah HP dibuat oleh js/layout.js -->
+<div id="site-footer"></div>
+<script src="js/layout.js" defer></script>
 </body></html>
