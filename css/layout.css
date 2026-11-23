@@ -1,0 +1,79 @@
+/* ==========================================================
+   layout.css — TAMBAHAN gaya (dimuat SETELAH style.css)
+   Isi: judul halaman, menu cepat, menu bawah HP, mode mobile ringkas.
+   ========================================================== */
+
+/* Tempat header/footer: tinggi dicadangkan agar halaman tidak "loncat" */
+#site-header{min-height:72px}
+
+/* Judul halaman dalam (Pendidikan, Masjid): pita kuning */
+.page-head{background:var(--color-marigold);padding:48px 0}
+.page-head h1{font-size:var(--text-heading-lg);line-height:var(--leading-heading-lg)}
+.page-head p{margin-top:12px;max-width:640px;font-size:18px}
+
+/* Menu cepat (ikon bulat) di Beranda */
+.quick-wrap{padding:0;margin-top:-32px;position:relative}
+.quick{background:#fff;border-radius:24px;padding:20px 16px;display:grid;gap:16px 8px;
+  grid-template-columns:repeat(6,1fr);box-shadow:var(--shadow-md)}
+.quick a{display:flex;flex-direction:column;align-items:center;gap:8px;text-decoration:none;font-size:14px;font-weight:500;text-align:center}
+.quick .qi{width:60px;height:60px;border-radius:50%;background:var(--surface-ink);color:var(--color-marigold);
+  display:flex;align-items:center;justify-content:center;font-size:24px}
+
+/* Menu bawah: disembunyikan di layar lebar */
+.bottom-nav{display:none}
+
+/* Daftar tanda centang kecil untuk halaman dalam */
+.page-cta{margin-top:var(--spacing-24)}
+
+/* ---------- MODE MOBILE RINGKAS (HP & tablet kecil) ---------- */
+@media(max-width:768px){
+  body{padding-bottom:76px;font-size:15px}           /* ruang untuk menu bawah */
+  section{padding:32px 0}
+  .section-title{font-size:24px;margin-bottom:16px}
+  .grid{gap:12px}
+  .card{padding:16px;border-radius:16px}
+  .card h3{font-size:18px;margin-bottom:8px}
+  .btn{padding:12px 20px;font-size:15px}
+  .btn-sm{padding:9px 16px;font-size:14px}
+
+  /* Header: hanya logo + nama; menu pindah ke bawah */
+  #site-header{min-height:56px}
+  .nav .wrap{height:56px;padding-top:0;padding-bottom:0;flex-wrap:nowrap}
+  .nav-links{display:none}
+  .brand{font-size:17px}
+  .brand img{width:36px;height:36px}
+
+  /* Hero & judul halaman lebih pendek */
+  .hero{min-height:300px}
+  .hero .wrap{padding-top:36px;padding-bottom:56px}
+  .hero h1{font-size:30px;margin-bottom:12px}
+  .hero p{font-size:15px;margin-bottom:20px}
+  .page-head{padding:28px 0}
+  .page-head h1{font-size:30px}
+  .page-head p{font-size:15px}
+
+  /* Menu cepat: 3 kolom */
+  .quick-wrap{margin-top:-28px}
+  .quick{grid-template-columns:repeat(3,1fr);padding:16px 8px}
+  .quick .qi{width:52px;height:52px;font-size:21px}
+  .quick a{font-size:13px}
+
+  /* Jadwal sholat: 5 waktu satu baris */
+  .prayer-grid{grid-template-columns:repeat(5,1fr);gap:6px}
+  .prayer-item{padding:10px 2px;border-radius:12px}
+  .prayer-item b{font-size:11px}
+  .prayer-item span{font-size:15px}
+
+  .map{height:240px}
+  footer{padding:24px 0;font-size:14px}
+
+  /* Menu bawah ala aplikasi */
+  .bottom-nav{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:20;background:#fff;
+    border-radius:20px 20px 0 0;box-shadow:0 -2px 12px rgba(70,58,0,.12);
+    padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px))}
+  .bottom-nav a{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;text-decoration:none;
+    font-size:11px;color:var(--color-char);padding:2px 0}
+  .bottom-nav a i{font-size:18px;padding:4px 16px;border-radius:999px}
+  .bottom-nav a[aria-current]{color:#000;font-weight:700}
+  .bottom-nav a[aria-current] i{background:var(--color-marigold)}
+}
